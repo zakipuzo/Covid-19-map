@@ -1,20 +1,28 @@
 
-<p>Welcome to {{zakipuzo}}</p>
 
- <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous" ></script>
-<script type="text/javascript">
+
+
+<div class="container text-center">
+	<h1>{{title}}</h1>
+
+	<h2 class="countries"></h2>
 	
-	$(document).ready(function() {
-		alert("hh");
+		<table class="table table-striped ">
+			<thead>
+    <tr>
+      <th scope="col">Country</th>
+      <th scope="col">Cases</th>
+      <th scope="col">Deaths</th>
+      <th scope="col">Recovered</th>
+    </tr>
+  </thead>
+  <tbody class="results ">
 
-        $.ajax({
-            url: "/zakipuzo",
-            type: 'GET',
-    		
-            success: function(result) {
+  </tbody>
+  
+		</table>
+	<div class="text-center">
+  	<img src="images/audio.svg">
+  </div>
 
-            	console.log(JSON.parse(result));
-            }
-        });
-	});
-</script>
+</div>

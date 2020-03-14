@@ -15,7 +15,7 @@ var options = {
 };
 
 request(options, function (error, response, body) {
-	if (error) throw new Error(error);
+	if (error) return callback("Try later");
 
 	//console.log(body);
 
@@ -27,7 +27,7 @@ router.get('/', function(req, res, next) {
 
 	//console.log(req.headers.host);
 	
-		 res.render('index', { title: "CORONAVIRUS"});
+		 res.render('index', { title: "COVID-19"});
 	
  
 });
